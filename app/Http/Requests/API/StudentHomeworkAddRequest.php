@@ -78,13 +78,13 @@ class StudentHomeworkAddRequest extends FormRequest
         $files=request('file');
         if(count($files) == 0)
         {
-            $rules['file']='required|max:8092|check_date|check_homework';
+            $rules['file']='required|max:8092|check_date';//check_homework
         }
         else
         {
 
            // $rules['file.*'] = 'required|file_extension:jpeg,jpg,png|max:8092|check_date|check_homework';
-             $rules['file.*'] = 'required|check_submission|check_homework';
+             $rules['file.*'] = 'required|check_submission';//check_homework
         }
 
         return $rules;
@@ -98,7 +98,7 @@ class StudentHomeworkAddRequest extends FormRequest
             'file.*.mimes'          =>  'File Extension Error. Select jpg,jpeg,png Files', 
             'file.*.max'            =>  'Maximum file size to upload is 8MB',
             'file.*.check_date'     =>  'Submission Date Already Expired',
-            'file.*.check_homework' =>  'Homework File already Exists',
+            // 'file.*.check_homework' =>  'Homework File already Exists',
             'file.*.check_submission'=>  'Submission Date Already Expired',
         ];
     }

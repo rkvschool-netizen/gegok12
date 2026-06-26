@@ -16,6 +16,7 @@ class Homework extends JsonResource
      */
     public function toArray($request)
     {
+
         $student_homework = StudentHomework::where([['homework_id',$this->id],['user_id',Auth::id()]])->first();
         if($this->submission_date!=null)
         {
@@ -27,10 +28,15 @@ class Homework extends JsonResource
 
         if($student_homework != null)
         {
-            if($student_homework->status == 'unchecked')
+            if($student_homework->submitted_on != null)
             {
                 $student_homework_status = 0;
             }
+            elseif($student_homework->status == 'unchecked')
+            {
+                $student_homework_status = null;
+            }
+            
             else
             {
                 $student_homework_status = 1;

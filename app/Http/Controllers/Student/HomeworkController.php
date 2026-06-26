@@ -108,7 +108,10 @@ class HomeworkController extends Controller
                 $files = [$files];
             }
 
-            $studentHomework = new StudentHomework;
+            $studentHomework =StudentHomework::where([
+                ['homework_id',$id],
+                ['user_id',Auth::id()]
+            ])->first();
             $studentHomework->homework_id  = $id;
             $studentHomework->user_id      = Auth::id();
             $studentHomework->submitted_on = now();

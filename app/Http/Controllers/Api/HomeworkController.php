@@ -287,7 +287,10 @@ class HomeworkController extends Controller
                 $files = $request->file;
                 if(count($request->file))
                 {
-                    $student_homework = new StudentHomework;
+                    $student_homework =StudentHomework::where([
+                        ['homework_id',$homework_id],
+                        ['user_id',$student_id]
+                ])->first();
 
                     $student_homework->homework_id       = $homework_id;
                     $student_homework->user_id           = $student_id;

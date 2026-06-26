@@ -78,12 +78,12 @@ class StudentHomeworkAddRequest extends FormRequest
         $files=request('file');
         if(count($files) == 0)
         {
-            $rules['file']='required|max:8092|check_date|check_homework';
+            $rules['file']='required|max:8092|check_date'; //check_homework
         }
         else
         {
             //$rules['file.*'] = 'required|file_extension:jpeg,jpg,png,JPG,PNG,JPEG|max:12000|check_date|check_homework';
-            $rules['file.*'] = 'required|check_submission|check_homework';
+            $rules['file.*'] = 'required|check_submission';//check_homework
             
         }
 

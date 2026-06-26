@@ -15,6 +15,7 @@ use App\Events\Notification\ClassNotificationEvent;
 use App\Http\Requests\HomeworkRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Traits\HomeworkProcess;
 use App\Models\HomeworkApproval;
 use App\Models\StudentHomework;
 use Illuminate\Http\Request;
@@ -32,6 +33,7 @@ class HomeworkController extends Controller
 {
     //
     use LogActivity;
+    use HomeworkProcess;
     use Common;
 
     /**
@@ -319,6 +321,8 @@ class HomeworkController extends Controller
             $homeworkapproval->status         = $status_approval;
 
             $homeworkapproval->save();
+
+            $student_homework =$this->addStudentHomework($work);
 
             $data = [];
 

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Gate;
 use App\Models\HomeworkApproval;
 use App\Events\StandardPushEvent;
 use App\Events\SinglePushEvent;
+use App\Traits\HomeworkProcess;
 use App\Models\AcademicYear;
 use Illuminate\Http\Request;
 use App\Models\StandardLink;
@@ -44,6 +45,7 @@ class HomeWorkController extends Controller
 
     use LogActivity;
     use Common;
+    use HomeworkProcess;
 
     public function showList(Request $request, $status)
     {
@@ -165,6 +167,8 @@ class HomeWorkController extends Controller
             }
 
             $homework->save();
+
+            $student_homework =$this->addStudentHomework($homework);
 
             $homeworkapproval = new HomeworkApproval;
 

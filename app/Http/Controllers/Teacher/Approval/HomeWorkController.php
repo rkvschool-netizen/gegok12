@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use App\Models\HomeworkApproval;
 use App\Events\SinglePushEvent;
+use App\Traits\HomeworkProcess;
 use Illuminate\Http\Request;
 use App\Models\StandardLink;
 use App\Traits\LogActivity;
@@ -30,6 +31,7 @@ use Log;
 class HomeWorkController extends Controller
 {
     //
+    use HomeworkProcess;
     use LogActivity;
     use Common;
 
@@ -195,6 +197,8 @@ class HomeWorkController extends Controller
             {
                 $status_approval='pending';
             }
+            
+            $student_homework =$this->addStudentHomework($work);
 
             if($admin->id != Auth::id())
             {
