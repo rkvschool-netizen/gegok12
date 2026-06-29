@@ -15,8 +15,21 @@ class StandardsTableSeeder extends Seeder
      */
     public function run()
     {
-        $standards = ['prekg', 'lkg', 'ukg', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
-        $order = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15'];
+        $standards = [
+            'Playgroup',
+            'Pre KG',
+            'LKG',
+            'UKG',
+            'Grade I',
+            'Grade II',
+            'Grade III',
+            'Grade IV',
+            'Grade V',
+            'Grade VI',
+            'Grade VII',
+            'Grade VIII'];
+            
+        $order = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 
         for ($i = 0; $i < count($standards); $i++) {
             DB::table('standards')->insert([

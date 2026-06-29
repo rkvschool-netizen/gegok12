@@ -56,5 +56,9 @@ Route::post( '/{slug}/admission-form/validationAcademicDetail', 'AdmissionContro
 Route::post( '/{slug}/admission-form/validationParentDetail', 'AdmissionController@validationParentDetail' );
 Route::post( '/{slug}/admission-form/validationPersonalDetail', 'AdmissionController@validationPersonalDetail' );
 
+Route::get( '/privacy-policy', 'AboutController@create');
+
+Route::get( '/terms-of-service', 'AboutController@terms');
+
 
 

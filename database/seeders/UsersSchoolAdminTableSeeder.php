@@ -28,9 +28,9 @@ class UsersSchoolAdminTableSeeder extends Seeder
             //admin
             $schoolAdmin = User::factory()->create([
                 'school_id'    =>   $school->id,
-                'name'         =>   'demoschool',
-                'email'        =>   'demoschool@mailinator.com',
-                'mobile_no'    =>   '2230456789',
+                'name'         =>   'rkv school',
+                'email'        =>   'admin@rkvschool.co.in',
+                'mobile_no'    =>   '9361150444',
                 'usergroup_id' =>   3
             ]);
 

@@ -2,35 +2,30 @@
 
 return [
 
+'privacy_policy' => 'Privacy Policy',
 
-'privacy_policy'=>'Privacy Policy',
+'text_1' => 'This Privacy Policy explains how RKV School collects, uses, protects, and manages the information of students, parents, teachers, staff, and visitors using our website and services.',
 
-'text_1'=>'This is a detailed structure of our privacy policy. This page covers every Gegosoft products and websites that link here.',
+'text_2' => 'Information RKV School Collects',
 
-'text_2'=>'Information Gegosoft collects',
+'text_3' => 'RKV School values your privacy and is committed to protecting your personal information. We do not sell, rent, or share your personal data with third parties for advertising purposes. This Privacy Policy helps you understand what information we collect and how it is used.',
 
-'text_3'=>'Gegosoft has never sold your data to anyone else for advertising or has made money showing your other’s people’s data. This is our approach, and we always adhere to it. This Privacy Policy allows you to know what information we will collect from you, who can have access to it, and what we do with your information.',
+'text_4' => 'We collect information that is necessary to provide educational and administrative services. This may include student details, parent information, contact details, admission records, academic information, and communication preferences. Payment information is processed securely through authorized payment providers, and we do not store sensitive payment card details.',
 
-'text_4'=>'We only collect information from you which we need. Some of that information includes the ones you voluntarily give us when you sign up or register for an account, ask for support from customer care, or buy a product from us. We do not store your payment details or credit card details, but we do store your name and contact information with us. ',
+'text_5' => 'We may also receive information when you contact us through our website, participate in school events, subscribe to updates, or interact with our official social media channels. Such information helps us improve communication and school services.',
 
-'text_5'=>'We also receive information from you indirectly when you enquire about our products through a referral program or sign in using any online service provider like Google or Facebook. If you engage with our social media or brand, we will have information regarding your profile.',
+'text_6' => 'How We Use Your Information',
 
-'text_6'=>'What we do with your data',
+'text_7' => 'RKV School uses the collected information to manage admissions, maintain student records, provide academic services, communicate important updates, process fee payments, and support school operations. We may also use information to improve our educational programs, website, and overall user experience.',
 
-'text_7'=>'Gegosoft uses your information to provide you service which you have requested. By using that data, we will create and maintain your account and communicate to you about the products that are currently in use, your customer support requirements, and the new products you would like. We analyze this information to understand the needs of the user and to improve our service and website.',
+'text_8' => 'Providing certain information is optional; however, some services may not be available without the required details. We implement appropriate security measures to protect your data and limit access to authorized staff, service providers, and educational partners who require it for legitimate purposes.',
 
-'text_8'=>'You can decline specific information uses by not providing them, or you can opt-out of it later. We do not use cookies on any of our websites, so you can stop worrying about disabling cookies. We limit the access of your data to our contractors and employees. If we share your information with other parties, it will only be after seeking your permission, and the details will be shared only with parties like developers, customer support, service provider, and domain registrars.',
+'text_9' => 'We retain personal information only for as long as necessary to fulfill educational, administrative, legal, and regulatory requirements. When information is no longer required, it is securely deleted, anonymized, or archived according to applicable policies.',
 
-'text_9'=>'We keep your information as long as it is required for the purposes stated by us. When we no longer require your data or have any legitimate need to possess it, we delete, isolate, or anonymize your information from our database.',
+'text_10' => 'General',
 
-'text_10'=>'General',
+'text_11' => 'RKV School may disclose information when required by law, court order, government authority, or when necessary to protect the safety, rights, and security of students, staff, parents, and the school community. Third-party websites and services linked from our platform may have their own privacy policies, and users are encouraged to review them separately.',
 
-'text_11'=>'Gegosoft will disclose some information if it is necessary to comply with a legal obligation, prevent fraud, or protect user’s safety. Social media modules and third party websites have their own privacy policies. Always check the relevant policy before committing to sharing access to your information with third parties.',
-
-'text_12'=>'You can always ask us questions about our privacy policies or bring to our notice if we have collected information from a minor or need to have your personal data removed from our forums. You can always check on our privacy policies and security policy.',
-
-
-
-
+'text_12' => 'If you have any questions regarding this Privacy Policy, wish to update your personal information, or request the removal of certain data where applicable, please contact RKV School administration. We are committed to addressing privacy-related concerns promptly and responsibly.',
 
 ];
