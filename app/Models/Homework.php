@@ -194,7 +194,7 @@ class Homework extends Model
     {
         $students       = SiteHelper::getClassStudents($this->school_id,$this->academic_year_id,$this->standardLink_id);
         $students_id    = $students->pluck('id')->toArray();
-        $finished       = \App\Models\StudentHomework::where('homework_id',$this->id)->whereIn('user_id',$students_id)->count();
+        $finished       = \App\Models\StudentHomework::where([['homework_id',$this->id],['status','checked']])->whereIn('user_id',$students_id)->count();
 
         return $finished;
     }
@@ -208,7 +208,7 @@ class Homework extends Model
     {
         $students       = SiteHelper::getClassStudents($this->school_id,$this->academic_year_id,$this->standardLink_id);
         $students_id    = $students->pluck('id')->toArray();
-        $finished       = \App\Models\StudentHomework::where('homework_id',$this->id)->whereIn('user_id',$students_id)->count();
+        $finished       = \App\Models\StudentHomework::where([['homework_id',$this->id],['status','checked']])->whereIn('user_id',$students_id)->count();
         $pending        = count($students_id) - $finished;
 
         return $pending;
