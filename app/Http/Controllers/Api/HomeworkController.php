@@ -96,6 +96,12 @@ class HomeworkController extends Controller
                 }
 
                 $array[$key]['studentHomeworkStatus'] =  $studentHomework->status;
+
+                if($studentHomework->submitted_on==null)
+                {
+                    $array[$key]['studentHomeworkStatus'] = null;
+                }
+
                 $array[$key]['attachmentFile']        =  $file;
                 $array[$key]['studentHomeworkId']     =  $studentHomework->id;
                 $array[$key]['teacher_comments']      =  $studentHomework->comments==null ? '':$studentHomework->comments;
@@ -191,6 +197,11 @@ class HomeworkController extends Controller
                 }
 
                 $array[$key]['studentHomeworkStatus'] =  $studentHomework->status;
+                
+                if($studentHomework->submitted_on==null)
+                {
+                    $array[$key]['studentHomeworkStatus'] = null;
+                }
                 $array[$key]['attachmentFile']        =  $file;
                 $array[$key]['studentHomeworkId']     =  $studentHomework->id;
                 $array[$key]['teacher_comments']      =  $studentHomework->comments==null ? '':$studentHomework->comments;
