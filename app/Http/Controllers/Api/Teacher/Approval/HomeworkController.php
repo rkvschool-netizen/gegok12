@@ -364,12 +364,13 @@ class HomeworkController extends Controller
      */
     public function show($id)
     {
-        //
-        $studentHomeworks = StudentHomework::where('homework_id',$id)->paginate(10);
+        $studentHomeworks = StudentHomework::where('homework_id', $id)
+            ->whereHas('homework.homeworkApproval', function ($query) {
+                $query->where('status', 'approved'); // or ->where('status', 1)
+            })
+            ->paginate(10);
 
-        $studentHomeworks = StudentHomeworkResource::collection($studentHomeworks);
-
-        return $studentHomeworks;
+        return StudentHomeworkResource::collection($studentHomeworks);
     }
 
     /**
