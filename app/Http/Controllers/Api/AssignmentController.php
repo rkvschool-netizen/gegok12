@@ -143,8 +143,8 @@ class AssignmentController extends Controller
                 ['submission_date','<=',date('Y-m-d')],
                 ['status','completed']
             ]);
-        $query=$query->whereHas('assignmentApproval' , function($query) {
-                    $query->where('status','approved');
+        $query=$query->whereHas('assignmentApproval' , function($q) {
+                    $q->where('status','approved');
                 });
         //date filter  
         if (isset($request->date)) {
