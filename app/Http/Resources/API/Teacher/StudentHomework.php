@@ -20,7 +20,7 @@ class StudentHomework extends JsonResource
             //'user_name'     =>  $this->student->name,
             'user_fullname'     =>  $this->student->FullName,
             'attachments'       =>  $this->AttachmentPath,
-            'submitted_on'      =>  date('d-m-Y',strtotime($this->submitted_on)),
+            'submitted_on' => $this->submitted_on ? \Carbon\Carbon::parse($this->submitted_on)->format('d-m-Y') : null,
             'checked_on'        =>(($this->checked_on)?date('d-m-Y',strtotime($this->checked_on)):''),
             'checked_by'        =>  $this->teacher->FullName,
             'checked_by_name'   =>  $this->teacher->name,
