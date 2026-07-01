@@ -53,7 +53,7 @@ class UserProfileAddRequest extends FormRequest
         Validator::extend('check_date_of_birth',function($attribute,$value,$parameters,$validator)
         { 
             $start = date('Y-06-01',strtotime('-20 years',strtotime(date('Y-m-d'))));
-            $end = date('Y-06-01',strtotime('-3 years',strtotime(date('Y-m-d'))));
+            $end = date('Y-06-01',strtotime('-2 years',strtotime(date('Y-m-d'))));
             if( (request('date_of_birth') <= $end)  && (request('date_of_birth') >= $start) )
             { 
                 return true;
